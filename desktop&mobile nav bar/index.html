@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive navbar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+    <nav>
+        <ul class="sidebar">
+          <li onclick=hideSidebar()><a href="#"><i class="fa-solid fa-xmark"></i></a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Forum</a></li>
+          
+        </ul>
+        <ul>
+          <li><a href="#">Portfilo</a></li>
+          <li class="hideOnMobile"><a href="#">Blog</a></li>
+          <li class="hideOnMobile"><a href="#">Products</a></li>
+          <li class="hideOnMobile"><a href="#">About</a></li>
+          <li class="hideOnMobile"><a href="#">Forum</a></li>
+          
+          <li class="menu-button" onclick=showSidebar()><a href="#"><i class="fa-solid fa-bars" ></i></a></li>
+        </ul>
+      </nav>
+    
+    
+<script>
+     function showSidebar(){
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display = 'flex'
+    }
+    function hideSidebar(){
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display = 'none'
+    }
+</script>    
+    
+</body>
+</html>
